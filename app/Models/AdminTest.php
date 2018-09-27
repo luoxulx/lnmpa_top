@@ -21,9 +21,15 @@ class AdminTest extends BaseModel
     public function setContentAttribute($value)
     {
         $data = [
-            'raw' => strip_tags($value,'<img>'),
+            'raw' => strip_tags($value),
             'html' => $value,
         ];
         $this->attributes['content'] = json_encode($data);
+    }
+
+    public function getContentAttribute($value)
+    {
+        $data = json_decode($value, true);
+        return $this->attributes['content'] = $data['html'];
     }
 }
