@@ -50,7 +50,7 @@ return [
 
         'prefix' => 'uslx',
 
-        'namespace' => 'App\\Http\\Controllers\\Admin',
+        'namespace' => 'App\\Admin\\Controllers',
 
         'middleware' => ['web', 'admin'],
     ],
@@ -206,7 +206,7 @@ return [
     | Supported: "tencent", "google", "yandex".
     |
     */
-    'map_provider' => 'google',
+    'map_provider' => 'tencent',
 
     /*
     |--------------------------------------------------------------------------
