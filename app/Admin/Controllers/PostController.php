@@ -85,14 +85,14 @@ class PostController extends BaseAdminController
         $grid = new Grid(new Post);
 
         $grid->id('ID')->sortable();
-        $grid->column('user_id', 'user_id');
-        $grid->column('type', 'type');
-        $grid->column('top', 'top');
-        $grid->column('comment_status', 'comment_status');
-        $grid->column('recommend', 'recommend');
-        $grid->column('view', 'view');
-        $grid->column('title', 'title');
-        $grid->column('source', 'source');
+        $grid->column('user_id', '用户ID');
+        $grid->column('type', '类型');
+        $grid->column('top', '置顶');
+        $grid->column('recommend', '推荐');
+        $grid->column('comment_status', '评论?');
+        $grid->column('view', '点击');
+        $grid->column('title', '标题');
+        $grid->column('source', '来源');
         $grid->created_at('Created at');
         $grid->updated_at('Updated at');
 
@@ -110,8 +110,15 @@ class PostController extends BaseAdminController
         $show = new Show(Post::findOrFail($id));
 
         $show->id('ID');
-        $show->field('title', 'title');
-        $show->field('content', 'content')->setEscape(false);
+        $show->field('user_id', '用户ID');
+        $show->field('type', '类型');
+        $show->field('top', '置顶');
+        $show->field('recommend', '推荐');
+        $show->field('comment_status', '评论?');
+        $show->field('view', '点击');
+        $show->field('source', '来源');
+        $show->field('title', '标题');
+        $show->field('content', '内容')->setEscape(false);
         $show->created_at('Created at');
         $show->updated_at('Updated at');
 

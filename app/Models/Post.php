@@ -33,4 +33,38 @@ class Post extends BaseModel
         $data = json_decode($value, true);
         return $this->attributes['content'] = $data['html'];
     }
+
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function tags()
+    {
+        return $this->morphToMany(Tag::class, 'taggable', 'taggables');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(PostComment::class);
+    }
+
+    public function scopeHot($query)
+    {
+        return $query->where('hot', 1);
+    }
+    public function scopeUnhot($query)
+    {
+        return $query->where('hot', 1);
+    }
+
+    public function scopeRecommend($query)
+    {
+        return $query->where('recommend', 1);
+    }
+
+    public function scopeUnrecommend($query)
+    {
+        return $query->where('released', 0);
+    }
 }

@@ -15,4 +15,6 @@ class Tag extends BaseModel
     {
         return \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $value)->diffForHumans();
     }
+
+
 }
