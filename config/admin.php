@@ -246,7 +246,7 @@ return [
     | This value is used to set the background image of login page.
     |
     */
-    'login_background_image' => '',
+    'login_background_image' => 'http://cdn2.lnmpa.top/uslx/backend.jpg',
 
     /*
     |--------------------------------------------------------------------------
