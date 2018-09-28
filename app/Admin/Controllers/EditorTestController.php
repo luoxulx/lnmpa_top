@@ -8,19 +8,14 @@
 
 namespace App\Admin\Controllers;
 
-use App\Http\Controllers\Controller;
-use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
-use App\Models\AdminTest;
-use Illuminate\Support\Facades\Input;
+use App\Models\EditorTest;
 
-class TestController extends Controller
+class EditorTestController extends BaseAdminController
 {
-
-    use HasResourceActions;
 
     /**
      * Index interface.
@@ -87,7 +82,7 @@ class TestController extends Controller
      */
     protected function grid()
     {
-        $grid = new Grid(new AdminTest);
+        $grid = new Grid(new EditorTest);
 
         $grid->id('ID')->sortable();
         $grid->column('title', 'title');
@@ -105,7 +100,7 @@ class TestController extends Controller
      */
     protected function detail($id)
     {
-        $show = new Show(AdminTest::findOrFail($id));
+        $show = new Show(EditorTest::findOrFail($id));
 
         $show->id('ID');
         $show->field('title', 'title');
@@ -123,7 +118,7 @@ class TestController extends Controller
      */
     protected function form()
     {
-        $form = new Form(new AdminTest);
+        $form = new Form(new EditorTest);
 
         $form->display('id', 'ID');
         $form->text('title', 'title');
