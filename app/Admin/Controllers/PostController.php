@@ -118,6 +118,7 @@ class PostController extends BaseAdminController
         $show->field('view', '点击');
         $show->field('source', '来源');
         $show->field('title', '标题');
+        $show->field('thumbnail', 'img');
         $show->field('content', '内容')->setEscape(false);
         $show->created_at('Created at');
         $show->updated_at('Updated at');
@@ -132,11 +133,19 @@ class PostController extends BaseAdminController
      */
     protected function form()
     {
+        $current_user = \Encore\Admin\Facades\Admin::user()->id;
         $form = new Form(new Post);
 
         $form->display('id', 'ID');
-        $form->text('title', 'title');
-        $form->editor('content', 'content')->setElementClass('');
+        $form->hidden('user_id', '当前用户ID')->value($current_user);
+        $form->radio('type', '类型')->options([1=>'内容', 2=>'页面'])->default(1);
+        $form->radio('top', '置顶')->options([0=>'否', 1=>'是'])->default(0);
+        $form->radio('recommend', '推荐')->options([0=>'否', 1=>'是'])->default(0);
+        $form->radio('comment_status', '评论?')->options([0=>'否', 1=>'是'])->default(1);
+        $form->text('source', '来源');
+        $form->text('title', '标题')->rules(['required'], ['请填写标题']);
+        $form->image('thumbnail', '缩略图');
+        $form->editor('content', '内容');
         $form->display('created_at', 'Created At');
         $form->display('updated_at', 'Updated At');
 
