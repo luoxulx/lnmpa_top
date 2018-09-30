@@ -83,7 +83,7 @@ class PostController extends BaseAdminController
     protected function grid()
     {
         $grid = new Grid(new Post);
-
+        //$grid->model()->ordered();
         $grid->id('ID')->sortable();
         $grid->column('user_id', '用户ID');
         $grid->column('type', '类型');
@@ -144,7 +144,10 @@ class PostController extends BaseAdminController
         $form->radio('comment_status', '评论?')->options([0=>'否', 1=>'是'])->default(1);
         $form->text('source', '来源');
         $form->text('title', '标题')->rules(['required'], ['请填写标题']);
+        //$form->select('category', '分类')->options(\App\Models\Category::all()->pluck('title', 'id'));
+        $form->listbox('tags')->options(\App\Models\Tag::all()->pluck('name', 'id'))->settings(['selectorMinimalHeight' => 175]);
         $form->image('thumbnail', '缩略图');
+        $form->textarea('description', '描述')->rows(4);
         $form->editor('content', '内容');
         $form->display('created_at', 'Created At');
         $form->display('updated_at', 'Updated At');

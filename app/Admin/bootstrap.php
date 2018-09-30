@@ -48,5 +48,5 @@ app('view')->prependNamespace('admin', resource_path('views/admin'));
 // lx-cdn-end
 Encore\Admin\Form::forget(['map', 'editor']);
 // lx-new
-Encore\Admin\Form::extend('editor', App\Admin\Extensions\Ueditor::class);
+Encore\Admin\Form::extend('editor', App\Admin\Extensions\WangEditor::class);
 

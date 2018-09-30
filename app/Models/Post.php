@@ -44,6 +44,8 @@ class Post extends BaseModel
         return $this->morphToMany(Tag::class, 'taggable', 'taggables');
     }
 
+
+
     public function comments()
     {
         return $this->hasMany(PostComment::class);
