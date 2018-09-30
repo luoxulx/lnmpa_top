@@ -1,16 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Admin\Controllers;
 
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\Dashboard;
 use Encore\Admin\Layout\Column;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Layout\Row;
-use Encore\Admin\Form;
-use Encore\Admin\Grid;
-use Encore\Admin\Show;
-use App\Models\AdminTest;
 
 class HomeController extends Controller
 {

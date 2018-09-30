@@ -11,7 +11,7 @@ return [
     | login page.
     |
     */
-    'name' => 'Laravel-admin',
+    'name' => 'duoke-test',
 
     /*
     |--------------------------------------------------------------------------
@@ -124,7 +124,7 @@ return [
     'upload' => [
 
         // Disk in `config/filesystem.php`.
-        'disk' => 'admin',
+        'disk' => 'public',
 
         // Image and file upload path under the disk above.
         'directory' => [
@@ -246,7 +246,8 @@ return [
     | This value is used to set the background image of login page.
     |
     */
-    'login_background_image' => '',
+    'login_background_image' => 'http://cdn2.lnmpa.top/uslx/backend.jpg',
+    'default_category_logo' => 'http://cdn2.lnmpa.top/uslx/backend.jpg',
 
     /*
     |--------------------------------------------------------------------------
