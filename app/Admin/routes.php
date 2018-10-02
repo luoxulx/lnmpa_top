@@ -11,6 +11,7 @@ Route::group([
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index');
+    $router->get('phpinfo', 'PhpinfoController@index');
     //测试 扩展编辑器部分
     $router->resource('test', 'EditorTestController', ['names'=>[
         'show' => 'test.show',
