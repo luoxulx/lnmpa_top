@@ -23,11 +23,9 @@ class PhpinfoController extends BaseAdminController
 
     protected function toCollection()
     {
-        $what = INFO_ALL;
-
         ob_start();
 
-        phpinfo($what);
+        phpinfo(INFO_ALL);
 
         $phpinfo = ['phpinfo' => collect()];
 
