@@ -1,0 +1,374 @@
+
+/*-------------------------------------------------------*/
+/* Hero Section
+/*-------------------------------------------------------*/
+
+.hero-section {
+  padding: 120px 0;
+}
+
+/*-------------------------------------------------------*/
+/* Latest Stories
+/*-------------------------------------------------------*/
+
+#main-slider {
+  padding: 0 11px 65px;
+  border-bottom: 1px solid $border-color;
+
+  .gallery-cell {
+    width: 20%;
+    padding: 0 2px;
+  }
+
+  .entry-category {
+    position: absolute;
+    background-color: #fff;
+    padding: 7px 18px;
+    font-size: 10px;
+    font-family: $heading-font;
+    font-style: normal;
+    color: $main-color;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    bottom: -12px;
+    left: 50%;
+    @include transform (translateX(-50%));
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  .entry-date {
+    font-size: 11px;
+    font-family: $alt-font;
+    font-style: italic;
+    color: $date-color;
+  }
+}
+
+
+/*-------------------------------------------------------*/
+/* Content
+/*-------------------------------------------------------*/
+
+.content {
+  padding: 110px 0;
+}
+
+/*-------------------------------------------------------*/
+/* Instagram Feed
+/*-------------------------------------------------------*/
+
+.instagram-feed h3 {
+  font-size: 24px;
+}
+
+.instagram-feed h5 {
+  font-size: 12px;
+}
+
+#instafeed-row {
+  li {
+    display: inline-block;
+    list-style-type: none;
+    width: 16.666%;
+  }
+}
+
+#instafeed-grid {
+  margin-left: -8px;
+
+  li {
+    display: inline-block;
+    list-style-type: none;
+    width: 33.33%;
+    padding: 0 0 8px 8px;
+  }
+}
+
+
+
+/*-------------------------------------------------------*/
+/* Hero Slider
+/*-------------------------------------------------------*/
+
+.hero-holder {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  left: 0;
+  @include transform (translateY(-50%));
+
+  h1 {
+    padding: 0 15px;
+  }
+
+  .entry-category {
+    color: #fff;
+    margin-bottom: 7px;
+  }
+
+  .entry-category:before,
+  .entry-category:after {
+    background-color: #fff;
+  }
+}
+
+.hero-heading {
+  font-size: 36px;
+  margin-bottom: 11px;
+
+  a:hover {
+    color: #fff;
+  }
+}
+
+
+/*-------------------------------------------------------*/
+/* Hero Image
+/*-------------------------------------------------------*/
+
+.hero-img {
+  background-image: url(../img/hero_img.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+
+  & > .container {
+    height: 700px;
+    position: relative;
+  }
+}
+
+.blog-standard.no-sidebar .post-content {
+  width: 100%;
+  padding: 0 15px;
+}
+
+
+/*-------------------------------------------------------*/
+/* Call To Action
+/*-------------------------------------------------------*/
+
+.call-to-action {  
+  position: relative;
+  padding: 135px 0;
+
+  & h3 {
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: normal;
+    color: $text-color;
+    margin-bottom: 39px;
+  }
+
+}
+
+.cta-buttons a {
+  margin: 5px;
+}
+
+
+/*-------------------------------------------------------*/
+/* Twitter Slider
+/*-------------------------------------------------------*/
+
+.twitter-slider {
+
+  #tweets .tweet {
+    color: $heading-color;
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  #tweets {
+    li {
+      max-width: 800px;
+      margin: auto;
+    }
+  }
+
+  & > a {
+    color: $heading-color;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .owl-pagination {
+    position: relative;
+    bottom: auto;
+    margin-top: 5px;
+  }
+
+  .twitter-icon {
+    font-size: 24px;
+    color: $main-color;
+    display: block;
+    margin-bottom: 18px;
+  }
+}
+
+
+/*-------------------------------------------------------*/
+/* Twitter List
+/*-------------------------------------------------------*/
+
+#tweets {
+
+  li {
+    padding: 8px 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  .tweet {
+    font-size: 15px;
+
+    a {
+      color: $main-color;
+    }
+  }
+
+  .timePosted {
+    font-size: 10px;
+    font-style: italic;
+    font-family: $alt-font;
+    color: $date-color;
+  }
+}
+
+
+/*-------------------------------------------------------*/
+/* Contact
+/*-------------------------------------------------------*/
+
+.contact-info {
+
+  h4 {
+    font-size: 15px;
+    margin-top: 40px;
+  }
+}
+
+.contact-item {
+  position: relative;
+  padding-left: 30px;
+  font-size: 15px;
+  line-height: 28px;
+
+  & p,
+  & span {
+    font-size: inherit;    
+  }
+
+  & a {
+    color: $text-color;
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
+
+.contact-icon {
+  position: absolute;
+  left: 0;
+
+  & i {
+    font-size: 16px;
+    color: $text-color;
+    vertical-align: middle;
+  }
+}
+
+
+#contact-form .message {
+  height: 50px;
+  width: 100%;
+  font-size: 13px;
+  line-height: 50px;
+  text-align: center;
+  float: none;
+  margin-top: 20px;
+  display: none;
+  color: #fff;
+}
+
+#contact-form .message.error { background-color: #d46e6e; }
+#contact-form .message.success { background-color: #71b69a; }
+
+
+/*-------------------------------------------------------*/
+/* About Me
+/*-------------------------------------------------------*/
+
+.about-me .social-icons {
+  margin-top: 45px;
+  padding-top: 38px;
+  border-top: 1px dashed $border-color;
+}
+
+
+/*-------------------------------------------------------*/
+/* 5 columns
+/*-------------------------------------------------------*/
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.col-xs-5ths {
+  width: 20%;
+  float: left;
+}
+
+@media (min-width: 767px) {
+  .col-sm-5ths {
+    width: 20%;
+    float: left;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-md-5ths {
+    width: 20%;
+    float: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-lg-5ths {
+    width: 20%;
+    float: left;
+  }
+}
+
+
+/*-------------------------------------------------------*/
+/* 404
+/*-------------------------------------------------------*/
+
+.page-404 h1 {
+  font-size: 200px;
+  line-height: 1.2;
+}
+
+.page-404 a,
+.page-404 p {
+  font-size: 14px;
+}

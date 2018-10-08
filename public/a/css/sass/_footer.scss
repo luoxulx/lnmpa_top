@@ -1,0 +1,275 @@
+/*-------------------------------------------------------*/
+/* Footer Type-1
+/*-------------------------------------------------------*/
+
+.footer-widgets {
+  padding: 100px 0;
+
+  & h5 {
+    margin-bottom: 36px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+  }
+
+  & a,
+  & p {
+    color: #fff;
+    font-size: 15px;
+  }
+}
+
+
+.container-fluid .footer-widgets > .row > div[class^="col"] {
+  padding: 0 40px;
+}
+
+.footer-widgets a:hover,
+.copyright a:hover,
+.footer-entry .entry-meta li a:hover,
+.bottom-footer-links li a:hover {
+  color: $main-color;
+}
+
+.footer-get-in-touch {
+  
+  .info-holder {
+    margin-top: 31px;
+  }
+
+  & p,
+  & a {
+    line-height: 32px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  & i {
+    font-size: 15px;
+    color: #5a5b5f;
+    margin-right: 5px;
+  }
+}
+
+.footer-address {
+  margin-bottom: 0;
+  line-height: 32px;
+  color: #fff;
+}
+
+.footer.bg-dark {
+
+  .entry-list ul > li {
+    border-bottom: 1px solid #40434a;
+
+    & .entry-meta li,
+    & .entry-meta li a {
+      color: #848890;
+      font-size: 12px;
+    }
+  }
+}
+
+.entry-li:first-child,
+.footer-links li:first-child {
+  padding-top: 0 !important;
+}
+
+.entry-li:last-child,
+.footer-links li:last-child {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+
+.footer-links ul > li {
+  padding: 4px 0;
+}
+
+input[type="email"].newsletter-input {
+  border-color: #3f3f3f;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+
+  &:focus {
+    border-color: $main-color;
+  }
+}
+
+.newsletter-submit {
+  background-color: transparent;
+  position: absolute;
+  color: #fff;
+  height: 44px;
+  font-size: 14px;
+  top: 0;
+  right: 0;
+  border: none;
+  font-family: 'Linearicons-Free';
+
+  &:before {
+    content: '\e876';
+  }
+}
+
+
+.bottom-footer {
+  padding: 17px 0;
+
+  & .social-icons a {
+    margin-bottom: 0;
+  }
+}
+
+.copyright {
+
+  & span {
+    display: inline-block;
+    font-size: 9px;
+    line-height: 32px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #7b7b7b;
+  }
+
+  & a {
+    color: #7b7b7b;
+  }
+}
+
+
+/*-------------------------------------------------------*/
+/* Widget Social
+/*-------------------------------------------------------*/
+
+.widget-social {
+  padding: 26px 0;
+
+  .social-icons i {
+    font-size: 14px;
+    margin-right: 3px;
+  }
+
+  .social-icons a {
+    display: inline;
+    margin: 0 12px;
+  }
+  
+  .social-icons span {
+    display: inline-block;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    font-size: 11px;
+  }
+
+}
+
+/*-------------------------------------------------------*/
+/* Footer Type-2
+/*-------------------------------------------------------*/
+
+.footer-type-2 .footer-widgets {
+  padding: 150px 0 120px;
+}
+
+.footer-extra-links {
+  margin-top: 50px;
+
+  li {
+    display: inline-block;
+    padding: 0 10px;
+  }
+}
+
+/*-------------------------------------------------------*/
+/* Footer Type-3
+/*-------------------------------------------------------*/
+
+.footer-type-3 {
+
+  .footer-widgets {
+    padding-top: 45px;
+    border-top: 1px solid $border-color; 
+  }
+
+  .footer-widgets a,
+  .footer-widgets p {
+    color: $text-color;
+  }
+}
+
+
+
+/*-------------------------------------------------------*/
+/* Style Switcher
+/*-------------------------------------------------------*/
+
+#customizer {
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,.10);
+  width: 320px;
+}
+
+.corner {
+  display: block;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+  top: 100px;
+  left: -40px;
+  box-shadow: -3px 0px 8px -1px rgba(0,0,0,.10);
+  line-height: 40px;
+  text-align: center;
+  border-radius: 3px 0 0 3px;
+  font-size: 20px;
+  color: #1e2023;
+  font-family: Helvetica, sans-serif;
+}
+
+.s-close {
+  right: -320px !important;
+  @include transition (all .4s ease-in-out);
+}
+
+.s-open {
+  right: 0 !important;
+}
+
+#options {
+  padding: 15px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.demo-list li {
+  float: left;
+  padding: 7px 4px;
+  width: 50%;
+}
+
+.demo-list img {
+  border: 1px solid $border-color;
+}
+
+.color-scheme a {
+  display: block;
+  height: 30px;
+  width: 30px;
+  margin: 0 4.25px 10px;
+}
+
+@media (max-width: 767px) {
+  #customizer {
+    display: none;
+  }
+}

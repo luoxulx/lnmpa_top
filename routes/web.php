@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::group(['namespace'=>'Frontend'], function(){
+	Route::get('/', 'IndexController@index');
+	Route::get('/{slug}', 'ArticleController@show')->where('slug', '[\/\w\.-]*');
 });
