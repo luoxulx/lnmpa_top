@@ -1,5 +1,8 @@
 <?php
 
+header('Server:Tengine');
+header('X-Powered-By:bitch.cn');
+header('X-Tengine-Error: denied by Referer ACL');
 /**
  * Laravel - A PHP Framework For Web Artisans
  *
