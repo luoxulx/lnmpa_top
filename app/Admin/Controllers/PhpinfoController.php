@@ -16,7 +16,7 @@ class PhpinfoController extends BaseAdminController
     public function index(Content $content)
     {
         $info = $this->toCollection();
-        return $content->header('phpInfo header')
+        return $content->header('phpinfo 信息')
             ->description('phpInfo description')
             ->body(view('Phpinfo.index', compact('info')));
     }
