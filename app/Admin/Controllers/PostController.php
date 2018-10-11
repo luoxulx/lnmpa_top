@@ -26,8 +26,8 @@ class PostController extends BaseAdminController
     public function index(Content $content)
     {
         return $content
-            ->header('post list')
-            ->description('post description')
+            ->header('文章列表')
+            ->description('文章列表')
             ->body($this->grid());
     }
 
@@ -41,8 +41,8 @@ class PostController extends BaseAdminController
     public function show($id, Content $content)
     {
         return $content
-            ->header('post Detail')
-            ->description('post description')
+            ->header('文章详细')
+            ->description('文章描述')
             ->body($this->detail($id));
     }
 
@@ -56,8 +56,8 @@ class PostController extends BaseAdminController
     public function edit($id, Content $content)
     {
         return $content
-            ->header('post Edit')
-            ->description('post description')
+            ->header('修改文章')
+            ->description('修改文章')
             ->body($this->form()->edit($id));
     }
 
@@ -70,8 +70,8 @@ class PostController extends BaseAdminController
     public function create(Content $content)
     {
         return $content
-            ->header('post Create')
-            ->description('post description')
+            ->header('创建文章')
+            ->description('创建文章')
             ->body($this->form());
     }
 
