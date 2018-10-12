@@ -596,7 +596,7 @@
 
                     <div class="col-sm-12 copyright text-center">
                 <span>
-                  © 2012 DeoTrendy • Made by <a href="http://deothemes.com">DeoThemes</a>
+                  © {{ date('Y') }} DeoTrendy • Made by <a href="http://deothemes.com">DeoThemes</a>
                 </span>
                     </div>
 
