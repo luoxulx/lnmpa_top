@@ -24,7 +24,7 @@ class CategoryController extends BaseAdminController
     public function index(Content $content)
     {
         return $content
-            ->header('All categories')
+            ->header('所有分类')
             ->body($this->tree());
     }
 
@@ -36,7 +36,7 @@ class CategoryController extends BaseAdminController
     public function create(Content $content)
     {
         return $content
-            ->header('Create new category')
+            ->header('创建新分类')
             ->body($this->form());
     }
 
@@ -49,7 +49,7 @@ class CategoryController extends BaseAdminController
     public function edit($id, Content $content)
     {
         return $content
-            ->header('Edit category')
+            ->header('修改分类')
             ->body($this->form()->edit($id));
     }
 
@@ -63,12 +63,12 @@ class CategoryController extends BaseAdminController
         $form = new Form(new Category());
         $form->display('id', 'ID');
         $form->select('parent_id')->options(Category::selectOptions());
-        $form->number('order', 'order')->default(0);
-        $form->text('title', 'title')->rules('required');
+        $form->number('order', '排序')->default(0);
+        $form->text('title', '标题')->rules('required');
         $form->image('logo');
-        $form->textarea('description')->rows(3)->rules('required');
-        $form->display('created_at', 'Created At');
-        $form->display('updated_at', 'Updated At');
+        $form->textarea('description', '描述信息')->rows(3)->rules('required');
+        $form->display('created_at', '创建时间');
+        $form->display('updated_at', '更新时间');
         return $form;
     }
 
